@@ -6,9 +6,11 @@ resources:
       branch: main
 
 jobs:
-  - name: build-sample-app
+  - name: build-job
+    public: true
     plan:
       - get: sample-app-repo
         trigger: true
+
       - task: gradle-build
         file: sample-app-repo/ci/tasks/gradle-build.yml
