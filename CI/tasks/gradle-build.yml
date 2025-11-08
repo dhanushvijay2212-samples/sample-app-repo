@@ -1,0 +1,18 @@
+platform: linux
+
+image_resource:
+  type: registry-image
+  source:
+    repository: gradle
+    tag: 8.7-jdk17   # Adjust version if you use a different JDK
+
+inputs:
+  - name: sample-app-repo
+
+run:
+  path: sh
+  args:
+    - -exc
+    - |
+      cd sample-app-repo
+      ./gradlew clean build

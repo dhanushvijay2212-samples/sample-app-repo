@@ -1,0 +1,14 @@
+resources:
+  - name: sample-app-repo
+    type: git
+    source:
+      uri: https://github.com/your-username/sample-app.git
+      branch: main
+
+jobs:
+  - name: build-sample-app
+    plan:
+      - get: sample-app-repo
+        trigger: true
+      - task: gradle-build
+        file: sample-app-repo/ci/tasks/gradle-build.yml
