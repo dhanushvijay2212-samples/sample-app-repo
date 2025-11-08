@@ -2,7 +2,7 @@ resources:
   - name: sample-app-repo
     type: git
     source:
-      uri: https://github.com/your-username/sample-app.git
+      uri: https://github.com/dhanushvijay2212-samples/sample-app.git
       branch: main
 
 jobs:

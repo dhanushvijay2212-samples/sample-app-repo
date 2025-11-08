@@ -4,7 +4,7 @@ image_resource:
   type: registry-image
   source:
     repository: gradle
-    tag: 8.7-jdk17   # Adjust version if you use a different JDK
+    tag: 8.7-jdk17
 
 inputs:
   - name: sample-app-repo
